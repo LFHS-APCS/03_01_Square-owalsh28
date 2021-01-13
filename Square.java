@@ -1,36 +1,41 @@
 
 public class Square 
-{ private double area;
+{ 
   private double side;
-public final int MAX_SIDE_LENGTH = 10;
+ public final int MAX_SIDE_LENGTH = 10;
 public Square() {
  
 }
 public Square(double theSide) { 
   side = theSide;
 }
-public void  getSide() {
-  //if (side <= 10) {
-System.out.println(side);
- // } else System.out.println("side is too long");
+public double  getSide() {
+  
+
+return side;
+ 
   
 }
 public void setSide(double theSide) { 
+  if (theSide>0 && theSide<= MAX_SIDE_LENGTH) {
   side = theSide;
+  }
+
 }
 public String toString() {
-  return "square with side length = " + side;
+  return "Square with side length = " + side;
 }
-public void getArea() { 
- area = side * side;
+public double area() { 
+ double area = side * side;
 
-  System.out.println("the area is " + area);
+ return  area;
 }
+public double diagonal() {
+  
+  return Math.sqrt(2)*side;
+  
 
-
-
-
-
+  
 
 }
 
